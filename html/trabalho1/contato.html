@@ -10,7 +10,7 @@
         <header>
             <h1>Contato</h1>
         <nav>
-            <a href="principal.html">Voltar ao curriculo</a>
+            <a href="index.html">Voltar ao curriculo</a>
         </nav>
         </header>
 
@@ -48,6 +48,7 @@
                     <div>
                         <label for="telefone">Telefone:</label>
                         <input type="tel" id="telefone" name="telefone" 
+                            pattern="[0-9]{3}-[0-9]{5}-[0-9]{4}"
                             placeholder="ex: 011-99999-0000" required>
                     </div>
                     <div>
@@ -95,6 +96,7 @@
                     <div>
                         <label for="cnpj">CNPJ:</label>
                         <input type="text" id="cnpj" name="cnpj"
+                            pattern="[0-9]{2}.[0-9]{3}.[0-9]{3}/[0-9]{4}-[0-9]{2}"    
                             placeholder="ex: 00.000.000/0000-00">
                     </div>
                     <div>
@@ -112,18 +114,24 @@
                     <div>
                         <label for="cep">CEP:</label>
                         <input type="text" name="cep" id="cep"
+                            pattern="[0-9]{2}.[0-9]{3}-[0-9]{3}"
                             placeholder="ex: 00.000-000" required>
                             <!-- o atb required não permite o envio sem o preenchimento desse campo -->
                     </div>
                     <div>
                         <label for="tipolog">Tipo de logradouro</label>
-                        <select name="tipolog" id="tipolog">
+                        <select name="tipolog" id="tipolog" required>
+                            <option value="">escolha...</option>
+                            <!-- em essa opcao temos erro de validação
+                            quando a selectbox tem o atb required,
+                            é necessario colocar uma opcao de value vazio no inicio.
+                            existem outras alternativas -->
                             <option value="rua">Rua</option>
                             <option value="avenida">Avenida</option>
                             <option value="alameda">Alameda</option>
                             <option value="praça">Praça</option>
                             <option value="outro">Outro</option>
-                        </select required>
+                        </select>
                     </div>
                     <div>
                         <label for="logradouro">Logradouro:</label>
@@ -135,13 +143,14 @@
                     </div>
                     <div>
                         <label for="estado">Estado:</label>
-                        <input type="text" name="estado" id="estado" required>
+                        <input type="text" name="estado" id="estado"
+                            pattern="[A-Za-z]{2}" required>
                     </div>
                 </section>
 
                 <section>
                     <div>
-                        <label for="detalhes"><h2>Descrição detalhada do interesse</h2></label>
+                        <h2>Descrição detalhada do interesse</h2>
                         <textarea name="detalhes" id="detalhes" cols="30" rows="10" required></textarea>
                     </div>
                 </section>
@@ -156,12 +165,12 @@
                                 <label for="linkedin">LinkedIn</label>
                             </div>
                             <div>
-                                <input type="radio" name="encontrou" id="linkedin" value="linkedin">
-                                <label for="linkedin">Google</label>
+                                <input type="radio" name="encontrou" id="google" value="google">
+                                <label for="google">Google</label>
                             </div>
                             <div>
-                                <input type="radio" name="encontrou" id="linkedin" value="linkedin">
-                                <label for="linkedin">Indicação</label>
+                                <input type="radio" name="encontrou" id="indicacao" value="indicacao">
+                                <label for="indicacao">Indicação</label>
                             </div>
                         </fieldset>
                         <fieldset>
