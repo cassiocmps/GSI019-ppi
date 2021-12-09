@@ -9,8 +9,189 @@
     <body>
         <header>
             <h1>Contato</h1>
-        </header>
         <nav>
             <a href="principal.html">Voltar ao curriculo</a>
         </nav>
+        </header>
+
+        <main>
+            <form action="proposta.php" method="get">
+            <!-- atb action é o script que recebe os dados -->
+            <!-- atb merhod é a forma que esse envio ocorre
+                get: pela url, indicado para pequenos forms e q não tem dados sensiveis 
+                post: enviado pelo corpo da requisição, não aparece na url, 
+                indicado quando há dados sensiveis-->
+                <section>
+                    <h2>Dados pessoais:</h2>
+                        <div>
+                        <!-- recomendado colocar o lab e o input dentro de uma div -->
+                        <label for="nome">Nome:</label>
+                        <!-- label fornece a identificação para o usuario -->
+                        <!-- atb for é usado junto com o id
+                            para que o label seja casado com o input -->
+                        <input type="text" id="nome" name="nome"
+                            placeholder="ex: Maria Aparecida de Sousa" required>
+                        <!-- atb name é a identificação do campo, 
+                            que é enviado junto com o seu valor para manipulação posterior -->
+                        <!-- atb placeholder é usado pra exibir dica de preenchido -->
+                    </div>
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email"
+                            placeholder="ex: maria@meuemail.com" required>
+                    </div>
+                    <div>
+                        <label for="idade">Idade:</label>
+                        <input type="number" id="idade" name="idade"
+                            min="15" max="99" required>
+                    </div>
+                    <div>
+                        <label for="telefone">Telefone:</label>
+                        <input type="tel" id="telefone" name="telefone" 
+                            placeholder="ex: 011-99999-0000" required>
+                    </div>
+                    <div>
+                        <label for="datanasc">Data de nascimento:</label>
+                        <input type="date" id="datanasc" name="datanasc">
+                    </div>
+                    <fieldset>
+                        <!-- elm fieldset agrupa campos com semantica em comum que tem algo em comum -->
+                        <legend>Sexo</legend>
+                        <!-- legend adiciona o 'titulo' do fieldset -->
+                        <div>
+                            <input type="radio" name="sexo" id="masc" value="masc">
+                            <label for="masc">Masculino</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="sexo" id="fem" value="fem">
+                            <label for="fem">Feminino</label>
+                        </div>
+                        <!-- input tipo radio é usado para uma lista onde apenas um pode ser selecionado.
+                            o mesmo valor do atb name deve ser o mesmo para serem considerados da mesma lista -->
+                    </fieldset>
+                    <fieldset>
+                        <legend>Estado civil</legend>
+                        <div>
+                            <input type="radio" name="estcivil" id="solteiro" value="solteiro">
+                            <label for="solteiro">Solteiro(a)</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="estcivil" id="casado" value="casado">
+                            <label for="casado">Casado(a)</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="estcivil" id="viuvo" value="viuvo">
+                            <label for="viuvo">Viuvo(a)</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="estcivil" id="divorciado" value="divorciado">
+                            <label for="divorciado">Divorciado(a)</label>
+                        </div>
+                    </fieldset>
+                </section>
+
+                <section>
+                    <h2>Dados da empresa</h2>
+                    <div>
+                        <label for="cnpj">CNPJ:</label>
+                        <input type="text" id="cnpj" name="cnpj"
+                            placeholder="ex: 00.000.000/0000-00">
+                    </div>
+                    <div>
+                        <label for="razaosocial">Razão social:</label>
+                        <input type="text" id="razaosocial" name="razaosocial">
+                    </div>
+                    <div>
+                        <label for="ramo">Ramo de atuação:</label>
+                        <input type="text" id="ramo" name="ramo">
+                    </div>  
+                </section>
+
+                <section>
+                    <h2>Endereço</h2>
+                    <div>
+                        <label for="cep">CEP:</label>
+                        <input type="text" name="cep" id="cep"
+                            placeholder="ex: 00.000-000" required>
+                            <!-- o atb required não permite o envio sem o preenchimento desse campo -->
+                    </div>
+                    <div>
+                        <label for="tipolog">Tipo de logradouro</label>
+                        <select name="tipolog" id="tipolog">
+                            <option value="rua">Rua</option>
+                            <option value="avenida">Avenida</option>
+                            <option value="alameda">Alameda</option>
+                            <option value="praça">Praça</option>
+                            <option value="outro">Outro</option>
+                        </select required>
+                    </div>
+                    <div>
+                        <label for="logradouro">Logradouro:</label>
+                        <input type="text" name="logradouro" id="logradouro" required>
+                    </div>
+                    <div>
+                        <label for="cidade">Cidade:</label>
+                        <input type="text" name="cidade" id="cidade" required>
+                    </div>
+                    <div>
+                        <label for="estado">Estado:</label>
+                        <input type="text" name="estado" id="estado" required>
+                    </div>
+                </section>
+
+                <section>
+                    <div>
+                        <label for="detalhes"><h2>Descrição detalhada do interesse</h2></label>
+                        <textarea name="detalhes" id="detalhes" cols="30" rows="10" required></textarea>
+                    </div>
+                </section>
+                
+                <section>
+                    <div>
+                        <h2>Outros</h2>
+                        <fieldset>
+                            <legend>Me encontrou por:</legend>
+                            <div>
+                                <input type="radio" name="encontrou" id="linkedin" value="linkedin">
+                                <label for="linkedin">LinkedIn</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="encontrou" id="linkedin" value="linkedin">
+                                <label for="linkedin">Google</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="encontrou" id="linkedin" value="linkedin">
+                                <label for="linkedin">Indicação</label>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Me ajude! Qual outra rede voce considera importante ou usa para procurar perfis?</legend>
+                            <div>
+                                <input type="checkbox" name="redes" id="facebook" value="facebook">
+                                <label for="facebook">Facebook</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="redes" id="instagram" value="instagram">
+                                <label for="instagram">Instagram</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="redes" id="currents" value="currents">
+                                <label for="currents">Google Currents</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="redes" id="orkut" value="orkut">
+                                <label for="orkut">Orkut</label>
+                            </div>
+                        </fieldset>
+                    </div>
+                </section>
+
+                <div>
+                    <button>Enviar</button>
+                    <!-- o tipo padrao do button é submit, já que está dentro do form -->
+                    <!-- é possivel usar o input tbm, permitindo usar uma imagem, mas se for texto
+                        é necessario usar atb value para que apareça o botao -->
+                </div>
+            </form> 
+        </main>
     </body>
