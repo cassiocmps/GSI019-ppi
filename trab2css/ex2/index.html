@@ -1,0 +1,76 @@
+<!DOCType html>
+<html lang="pt-br">
+    
+    <head>
+        <meta charset="UTF-8">
+        <title>LOGIN</title>
+        <style>
+            html{
+                background-color: whitesmoke;
+            }
+            main{
+                font-family: Georgia;
+                width: 50%;
+                background-color: white;
+                border: 0.8px solid #aaa;
+                border-radius: 5px;
+                position: absolute;
+                /* prop position permite mudar o posicionamento
+                do elemento na pag
+                com valor absolute, o elm é retirado do layout padrão
+                e então é poscionado relativamente ao ancestral q tbm está posicionado
+                mas nesse caso aqui, como não tem esse ancetrasl
+                ele é posicionado em relação ao html, usando top e left abaixo */
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                /* o transform aqui é necessario para fazer a translaçao.
+                usando somente position: absolute e os valores top e left, 
+                o elemento seria deslocado em com o seu topo no 50% da pagina.
+                com o translate -50% vc retorna com o container pra cima metade
+                do seu tamanho. slide 36 aula 2 de css*/
+                /* padding: 1rem; */
+            }
+            input{
+                padding: 10px;
+                border: 1px solid #888;
+                border-radius: 5px;
+                display: block;
+                /* propriedade display permite alterar o modo de apresentação */
+                margin: 3px;
+                width: 90%;
+            }
+            input:focus{
+                border: 1px solid red;
+                box-shadow: 0 0 5px red;
+                /* box shadow: 
+                    2 valores: deslocamento na horizontal e na vertical
+                    3 valores: adiciona cor
+                    4 valores: deslocamentos, desfoque e cor */
+                outline: none;
+                /* outline por default aparece quando o input é selecionado */
+            }
+            div{
+                margin: 1rem;
+            }
+        </style>
+    </head>
+
+    <body>
+        <main>
+            <form action="login.php" method="post">
+                <div>
+                    <label for="user">Usuario:</label>
+                    <input type="text" id="user" name="user" required>
+                </div>
+                <div>
+                    <label for="password">Senha:</label>
+                    <input type="text" id="password" name="password" required>
+                </div>
+                <div>
+                    <button>Entrar</button>
+                </div>
+            </form>
+            
+        </main>
+    </body>
