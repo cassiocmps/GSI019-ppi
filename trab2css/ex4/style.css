@@ -1,0 +1,96 @@
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: whitesmoke;
+}
+main, header, footer {
+    width: 60%;
+    margin: 0 auto;
+    border: solid rgb(150, 150, 150);
+    border-width: 0px 10px;
+    background-color: rgb(220, 220, 220);
+    min-width: 40rem;
+    max-width: 50rem;
+}
+
+h1, nav, table{
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h2{
+    margin: 1rem;
+    margin-top: 0;
+}
+
+footer{
+    padding: 1rem 0;
+}
+
+footer h2, footer address{
+    display: inline;
+}
+
+ul,ol{
+    margin: 1rem;
+}
+
+.dados{
+    list-style: none;
+    padding: 0 0 0 20px;
+}
+
+.dados li:before {
+    content: "\00BB   ";
+}
+
+.jobs{
+    list-style-image: url('images/icon1.png');
+}
+
+ol{
+    list-style-type: upper-roman;
+}
+
+li{
+    margin: 10px;
+}
+
+.mapa {
+    padding: 10px;
+    border: 0;
+}
+
+p{
+    margin: 0;
+}
+
+.video{
+    width: 100%;
+    height: 400px;
+    border: 0;
+}
+
+img{
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.nome{
+    margin: 0;
+    text-align: left;
+}
+
+.perfil{
+    border-radius: 50%;
+}
+
+a{
+    text-decoration: none;
+    color: grey;
+    padding: 0.5rem;
+}
+
+a:hover{
+    color: black;
+}
