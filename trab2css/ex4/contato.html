@@ -20,14 +20,16 @@
                 <section>
                     <h2>Dados pessoais:</h2>
                         <div>
-                        <label for="nome">Nome:</label>
-                        <input type="text" id="nome" name="nome"
+                        <label class="inblock" for="nome">Nome:</label>
+                        <input class="inline" type="text" id="nome" name="nome"
                             placeholder="ex: Maria Aparecida de Sousa" required>
+                        <span></span>
                     </div>
                     <div>
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email"
+                        <label class="inblock" for="email">Email:</label>
+                        <input class="inline" type="email" id="email" name="email"
                             placeholder="ex: maria@meuemail.com" required>
+                        <span></span>
                     </div>
                     <div>
                         <label for="idade">Idade:</label>
@@ -35,10 +37,11 @@
                             min="15" max="99" required>
                     </div>
                     <div>
-                        <label for="telefone">Telefone:</label>
-                        <input type="tel" id="telefone" name="telefone" 
+                        <label class="inblock" for="telefone">Telefone:</label>
+                        <input class="inline" type="tel" id="telefone" name="telefone" 
                             pattern="[0-9]{3}-[0-9]{5}-[0-9]{4}"
                             placeholder="ex: 011-99999-0000" required>
+                        <span></span>
                     </div>
                     <div>
                         <label for="datanasc">Data de nascimento:</label>
@@ -153,8 +156,8 @@
                                 <label for="indicacao">Indicação</label>
                             </div>
                         </fieldset>
-                        <fieldset>
-                            <legend>Me ajude! Qual outra rede voce considera importante ou usa para procurar perfis?</legend>
+                        <fieldset class="legendaGrande">
+                            <legend>Qual outra rede voce usa/considera importante para procurar perfis?</legend>
                             <div>
                                 <input type="checkbox" name="redes" id="facebook" value="facebook">
                                 <label for="facebook">Facebook</label>
