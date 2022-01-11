@@ -1,0 +1,122 @@
+<!DOCType html>
+<html lang="pt-br">
+    
+    <head>
+        <meta charset="UTF-8">
+        <title>Janela Modal</title>
+        <style>
+            header{
+                text-align: center;
+                color: whitesmoke;
+                background-color: gray;
+                padding: 1rem;
+            }
+            h1, h2 {
+                margin: 0;
+            }
+            body {
+                margin: 0;
+                background-image: url("images/background.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                font-family: 'Heuvetica Neue', Arial, sans-serif;
+            }
+            main {
+                width: 60%;
+                margin: 0 auto;
+                padding: 2rem;
+                border: 1px solid gray;
+                border-top: 0;
+                background-color: whitesmoke;
+            }
+            .modal {
+                background-color: #0006;
+                width: 100%;
+                height: 100%;
+
+                position: fixed;
+                top: 0;
+                left: 0;
+                overflow: auto;
+                z-index: 1;
+
+                display: none;
+            }
+
+            .modalContent {
+                background-color: whitesmoke;
+                margin: auto;
+                padding: 20px;
+                border: 0.5px solid lightgray;
+                box-shadow: 0 0 5px #333;
+
+                width: 50%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                text-align: center;
+            }
+
+            .buttonClose {
+                width: 80%;
+                margin-top: 1rem;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h1>Janela Modal</h1>
+        </header>
+        <main>
+            <section>
+                <h2>Lorem Ipsum</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec dignissim ligula. 
+                    Aenean purus nunc, aliquam eu bibendum in, consectetur auctor urna. In turpis velit, 
+                    aliquam ut euismod vitae, dictum eget orci. Maecenas vitae purus sit amet neque consequat 
+                    aliquet sit amet eu lorem. Integer eget pharetra velit, sed vestibulum est. 
+                    Donec sollicitudin lectus sed maximus egestas. Proin sit amet feugiat mauris. 
+                    Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc gravida, velit ut 
+                    accumsan dapibus, libero sapien venenatis diam, sit amet condimentum sem risus id metus. 
+                    In vel massa pulvinar, tincidunt neque ac, cursus velit. Suspendisse ullamcorper sit amet 
+                    leo laoreet sodales. Aliquam pellentesque nisl justo, vel laoreet nunc rhoncus vitae. 
+                    Nam quam metus, condimentum vel sapien ut, commodo tincidunt ligula. Nam molestie tincidunt 
+                    tincidunt. Praesent tincidunt aliquet euismod. Ut eu mi at leo maximus tempor.
+                </p>
+                <p>
+                    Fusce ut risus mollis, eleifend leo nec, pretium ante. Sed lobortis lorem ante, ac commodo 
+                    tortor elementum nec. Donec at lacus non orci viverra consequat a quis justo. Quisque at 
+                    justo arcu. Pellentesque vel laoreet nisi. In gravida sit amet odio ut ultrices. In in leo 
+                    vel ex cursus dictum.
+                </p>
+            </section>
+            
+            <button class="buttonOpen">Abrir Modal</button>
+
+            <div id="modal" class="modal">
+                <div class="modalContent">
+                    <h2>Fusce feugiat eu quam.</h2>
+                    <button class="buttonClose">Ok</button>
+                </div>
+            </div>
+
+            <script>
+                window.onload = function (){ // chama a função anonima declarada quando o metodo onload detecta que o evento load, carregamento completo da pagina, acontece
+                    const modal = document.querySelector(".modal"); // modal recebe o primeiro nó DOM da classe modal encontrado pelo metodo querySelector da pagina (document)
+                    const buttonClose = modal.querySelector(".buttonClose") // buttonClose recebe o primeiro nó DOM da classe buttonClose encontrado pelo querySelector do nó modal definido anteriormente
+                    const buttonOpen = document.querySelector(".buttonOpen") // buttonOpen segue a mesma logica, buscando a primeira classe buttonOpen do documento.
+
+                    buttonClose.addEventListener("click", function(){ // addEventListener monitora o objeto, nessa caso o botão de fechar da janela modal, esperando o evento do primeiro argumento, nesse caso um click. Quando o evento ocorre, a função anonima é chamada
+                        modal.style.display = 'none'; // por sua vez essa funcção apenas muda um atributo css da classe modal do documento, tornando a janela invisivel
+                    });
+
+                    buttonOpen.addEventListener("click", function(){ // addEventListener agora monitora o outro botão, que abre a janela, pela mesma ação do click, e chama outra função anonima
+                        modal.style.display = 'block'; // e esse função muda o atributo css de display da janela modal para block, tornando-a visivel
+                    });
+                }
+            </script>
+        </main>
+    </body>
