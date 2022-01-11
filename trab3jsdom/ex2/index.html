@@ -1,0 +1,94 @@
+<!DOCType html>
+<html lang="pt-br">
+    
+    <head>
+        <meta charset="UTF-8">
+        <title>JS+DOM ex2</title>
+        <style>
+            main{
+                border: 1px solid rgb(200, 200, 200);
+                border-radius: 3px;
+                background-color: lightgray;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                padding: 1rem;
+            }
+            main > div{
+                margin: 1rem;
+            }
+            input{
+                border: 1px solid black;
+                border-radius: 3px;
+            }
+            input:focus{
+                outline: none;
+            }
+            ol{
+                margin: 1rem;
+                padding: 0;
+            }
+            ol > li {
+               width: 230px; 
+               padding: 5px 10px 5px 20px;
+               margin: 3px;
+               background-color: rgb(189,217,240);
+               border: 0.5px solid rgb(70,67,212);
+               border-radius: 3px;
+            }
+            li > button {
+                font-size: 1rem;
+                float: right;
+                color: red;
+                border: none;
+                background-color: rgb(189,217,240);
+                cursor: pointer;
+            }
+        </style>
+    </head>
+
+    <body>
+        <main>
+            <div>
+                <label for="interesse">Interesse:</label>
+                <input type="text" name="interesse" id="interesse">
+            </div>
+
+            <ol>
+            </ol>
+        </main>
+
+        <script>
+            window.onload = function(){ // apos evento load, carregamento da pagina, acontecer, a função anonima é chamada
+                const campoInteresse = document.querySelector("#interesse"); // seleciona o primeiro nó com id interesse presente no documento html, nesse caso um elm input
+                campoInteresse.addEventListener("keyup", e =>{ // monitora o input para cada tecla precionad (e), chamando a arrow function anonima
+                    if (e.key === "Enter"){ // se a tecla pressionada for a tecla "enter"
+                        adicionaInteresse(); // a função adicionaInteresse() é chamada.
+                    }
+                })
+            }
+
+            function adicionaInteresse(){ // declaração de função
+                const campoInteresse = document.querySelector("#interesse"); // seleciona o primeiro nó com id interesse presente no documento html, nesse caso um elm input
+                const listaInteresses = document.querySelector("ol") // seleciona o primeiro nó do tipo ol presente no documento
+
+                const novoLi = document.createElement("li"); // cria um novo item de lista
+                const novoSpan = document.createElement("span"); // cria um novo elm span
+                const novoBotao = document.createElement("button"); // cria um novo botao
+
+                novoSpan.textContent = campoInteresse.value; // o novo span criado recebe o valor presente no input selecionado anteriormente
+                novoBotao.textContent = '✕'; // o botao criado recebe o conteudo de texto "x"
+
+                novoLi.appendChild(novoSpan); // o novo span é adicionado como elemento filho do novo item de lista
+                novoLi.appendChild(novoBotao);  // o novo botao é adicionado como elemento filho do novo item de lista
+                listaInteresses.appendChild(novoLi); // finalmente o novo item de lista é adicionado ao DOM como filho do elm ol
+
+                novoBotao.onclick = function(){ // função anonima que adiciona função ao botao do novo item da lista
+                    listaInteresses.removeChild(novoLi); // a função é a remoção do elm adicionado da estrutura DOM do html
+                }
+
+                campoInteresse.value = ''; // por fim o input para entrada de dados é esvaziado
+            }
+        </script>
+    </body>
