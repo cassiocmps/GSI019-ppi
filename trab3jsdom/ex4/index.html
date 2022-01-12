@@ -1,0 +1,108 @@
+<!DOCType html>
+<html lang="pt-br">
+    
+    <head>
+        <meta charset="UTF-8">
+        <title>JS+DOM ex4</title>
+        <style>
+            body {
+                margin: 0;
+                background-image: url("images/background.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            main {
+                width: 50%;
+                margin: 0 auto;
+                border: 1px solid whitesmoke;
+                border-radius: 5px;
+                background-color: white;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                padding: 1rem;
+            }
+            label, input, span{
+                display: block;
+                outline: none;
+                margin: 10px 0;
+            }
+            input{
+                padding: 5px;
+            }
+            span{
+                color: red;
+            }
+            form > div{
+                margin-bottom: 20px;
+            }
+            
+        </style>
+    </head>
+
+    <body>
+        <main>
+            <div>
+                <h3>Cadastro de Usuário</h3>
+                <form name="formCadastro" action="action.php" method="post">
+                    
+                    <div>
+                        <label for="usuario">Usuário:</label>
+                        <input type="text" name="usuario" id="usuario" autocomplete="off">
+                        <span></span>
+                    </div>
+
+                    <div>
+                        <label for="senha">Senha:</label>
+                        <input type="password" name="senha" id="senha">
+                        <span></span>
+                    </div>
+
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email" autocomplete="off">
+                        <span></span>
+                    </div>
+
+                    <button>Cadastrar</button>
+                </form>
+            </div>
+        </main>
+
+        <script>
+            window.onload = function(){ // função anonima chamada ao ser finalizado o carregamento da pagina
+                document.forms.formCadastro.onsubmit = validaForm; // o metodo onsubimit refere-se ao evento da submissão do formulario, ou seja, quando o usuario clicar no botao de enviar. nesse caso a função de validação do formulario é chamada
+            }
+
+            function validaForm(e){ // declaração da função de validaçaõ
+                let form = e.target; // dá acesso ao objeto do formulario
+                let formValido = true; // retorno da função. por padrão é definido como true. caso haja problemas, será detectado pelo restante do algoritmo abaixo
+
+                const spanUsuario = form.usuario.nextElementSibling; // propriedade nextElementSibling dá acesso ao elm filho do mesmo pai da estrutura dom na pagina.
+                const spanSenha = form.senha.nextElementSibling; //nesse caso, o proximo irmão valido do campo usuario é o span vazio, 
+                const spanEmail = form.email.nextElementSibling; //que foi destinado para ser preenchido com uma msg avisando o usuario
+
+                spanUsuario.textContent = ""; // aqui os campos span são esvaziados,
+                spanSenha.textContent = ""; // pois em uma possivel subimissão errada novamente, 
+                spanEmail.textContent = ""; // o span que estiver preenchido será limpo, e o usuario recebera a msg apenas de onde não está
+
+                if (form.usuario.value === ""){ // caso o campo usuario esteja vazio
+                    spanUsuario.textContent = 'O usuário deve ser preenchido'; // o span irmão do campo recebe o texto, avisando que é obrigatorio
+                    formValido = false; // então o retorno da função será false, invalidando o formulario e impedindo a submissão
+                }
+
+                if (form.senha.value === ""){ // caso o campo senha esteja vazio
+                    spanSenha.textContent = 'A senha deve ser preenchida'; // o span irmão do campo recebe o texto, avisando que é obrigatorio
+                    formValido = false; // então o retorno da função será false, invalidando o formulario e impedindo a submissão
+                }
+
+                if (form.email.value === ""){ // caso o campo email esteja vazio
+                    spanEmail.textContent = 'O email deve ser preenchido'; // o span irmão do campo recebe o texto, avisando que é obrigatorio
+                    formValido = false; // então o retorno da função será false, invalidando o formulario e impedindo a submissão
+                }
+
+                return formValido;
+            }
+        </script>
+    </body>
