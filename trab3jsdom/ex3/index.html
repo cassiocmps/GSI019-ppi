@@ -1,0 +1,210 @@
+<!DOCType html>
+<html lang="pt-br">
+    
+    <head>
+        <meta charset="UTF-8">
+        <title>FACOM - UFU</title>
+        <style>
+            header{
+                text-align: center;
+                color: whitesmoke;
+                background-color: black;
+                padding: 1rem;
+            }
+            h1, h2 {
+                margin: 0;
+            }
+
+            h2{
+                color: darkblue;
+            }
+
+            body {
+                margin: 0;
+                background-color: lightgray;
+            }
+            main {
+                width: 60%;
+                margin: 0 auto;
+                padding: 2rem;
+                border: 1px solid gray;
+                background-color: whitesmoke;
+            }
+
+            nav{
+                width: 100%;
+                margin: 0 auto 5px;
+                background-color: whitesmoke;
+                text-align: center;
+                border-bottom: 3px solid gray;
+            }
+
+            nav > section > ul{
+                padding: 0;
+                margin: 0;
+            }
+
+            nav > section > ul > li{
+                display: inline;
+            }
+
+            nav button{
+                display: inline;
+                border: none;
+                outline: none;
+                padding: 0 10px;
+                background-color: inherit;
+                height: 30px;
+                margin: 0;
+            }
+
+            nav button:hover{
+                color: blue;
+                cursor: pointer;
+                text-decoration: underline;
+            }
+
+            button.buttonActive{
+                font-weight: bold;
+                color: blue;
+            }
+
+            .tabs section{
+                display: none;
+            }
+
+            section.tabActive{
+                display: block;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h1>Faculdade de Computação</h1>
+        </header>
+
+        <nav>
+            <section>
+                <ul>
+                    <li><button data-tabname="BCC">Ciência da Computação</button></li>
+                    <li><button data-tabname="BSI">Sistemas de Informação</button></li>
+                    <li><button data-tabname="MEST">Mestrado</button></li>
+                    <li><button data-tabname="DOUT">Doutorado</button></li>
+                </ul>
+            </section>
+        </nav>
+
+        <main>
+            <div class="tabs">
+                <section data-tabname="BCC">
+                    <h2>Bacharelado em Ciência da Computação</h2>
+                    <p>O Curso de Bacharelado em Ciência da Computação é o 
+                        marco inicial da Faculdade de Computação. Foi criado 
+                        em 1988 e teve o seu reconhecimento em 11 de fevereiro 
+                        de 1993 por meio da Portaria 181/93 do MEC. O objetivo 
+                        do Curso é formar profissionais da área de Informática 
+                        com competência no desenvolvimento de software, atendendo 
+                        adequadamente as exigências de mercado de trabalho, 
+                        além de capacitar o egresso a concluir com sucesso 
+                        programas de pós-graduação.</p>
+                    <p>Os egressos do curso têm obtido grande êxito na realização 
+                        profissional, destacando, um considerável número de 
+                        empresas pertencentes à ex-alunos do curso; um grande 
+                        número de alunos que ingressam em consolidados cursos de 
+                        pós-graduação no país e exterior; atuação significativa 
+                        de nossos ex-alunos em atividades de ensino e pesquisa 
+                        em instituições de ensino de nível superior; e outros 
+                        tantos que atuam em grandes empresas nacionais e multinacionais.</p>
+                </section>
+                <section data-tabname="BSI">
+                    <h2>Bacharelado em Sistemas de Informaçaõ</h2>
+                    <p>O Curso de Bacharelado em Sistemas de Informação foi criado 
+                        no ano de 2009 e teve o seu reconhecimento em 31 de Maio 
+                        de 2013 por meio da Portaria 248/13 do Ministério da Educação.</p>
+                    <p>O Objetivo do Curso é preparar profissionais com sólida e ampla 
+                        formação técnica na área de tecnologia da informação aplicada 
+                        às organizações; Desenvolver discentes empreendedores, capazes 
+                        de projetar, implementar e gerenciar a infraestrutura de 
+                        tecnlogia da informação envolvendo computadores, comunicação 
+                        e dados em sistemas organizacionais; Consolidar um profissional 
+                        cidadão, com competências - conhecimentos, habilidades e 
+                        atitudes - e com responsabilidade social, capaz de respeitar as 
+                        diferenças individuais, saber produzir e usar a tecnologia em 
+                        benefício da sociedade e com visão sistêmica de negócios.</p>
+                </section>
+                <section data-tabname="MEST">
+                    <h2>Mestrado</h2>
+                    <p>Morbi ac viverra erat, nec rutrum sapien. Morbi congue, ante et 
+                        consequat semper, ligula felis tristique urna, sit amet sagittis 
+                        lacus ipsum at arcu. Donec lacinia ipsum id euismod lobortis. 
+                        Aliquam pellentesque facilisis mi, vel ultricies elit. Nunc 
+                        varius tortor sed ligula interdum pharetra. Pellentesque eget 
+                        lacinia mauris. Proin sollicitudin sem non lacinia suscipit. 
+                        Nulla ut blandit orci. Vestibulum ante orci, dapibus id ante 
+                        vel, maximus tincidunt nulla.</p>
+                    <p>Morbi vitae lobortis erat, nec ultrices sapien. Fusce aliquet 
+                        pharetra libero, ac scelerisque ex congue nec. Duis auctor 
+                        sit amet libero at dictum. Aenean cursus ultricies mauris 
+                        quis tempus. Curabitur nec vestibulum ante. Donec mollis a 
+                        dolor nec sodales. Morbi non congue libero, quis tincidunt 
+                        libero. Duis non est ultricies, facilisis felis eu, facilisis 
+                        quam. Vivamus quis pharetra nunc, ut facilisis augue. Aenean 
+                        dignissim tristique magna. Duis vitae justo non sem eleifend 
+                        tempus. Cras sit amet quam fringilla, iaculis quam nec, sagittis 
+                        mauris. Sed luctus dapibus semper. Proin vulputate nunc libero, 
+                        vitae pulvinar nibh placerat sed. Integer ut pretium tellus, et 
+                        tempus quam. Sed et quam ut tortor ornare pharetra.</p>
+                </section>
+                <section data-tabname="DOUT">
+                    <h2>Doutorado</h2>
+                    <p>Curabitur mattis nisi nec tincidunt vulputate. Fusce faucibus 
+                        nec diam sed imperdiet. Curabitur sollicitudin pellentesque 
+                        mattis. In vel mi nec justo malesuada suscipit consectetur 
+                        eu magna. Quisque ullamcorper mauris ut augue luctus, non 
+                        tempus elit malesuada. Sed hendrerit tellus ut elit tempor, 
+                        id luctus orci cursus. Aenean mollis velit sed lacus bibendum 
+                        feugiat eget vel felis. Quisque consectetur in risus hendrerit 
+                        efficitur.</p>
+                    <p>Mauris turpis massa, fringilla at dignissim ut, vehicula quis 
+                        metus. Nulla ornare lorem quam, non congue ipsum viverra id. 
+                        Nam rutrum ante arcu, quis mattis mi facilisis in. Fusce ac 
+                        viverra neque. Aliquam imperdiet, felis quis eleifend feugiat, 
+                        massa sapien pretium est, sed fringilla justo magna facilisis 
+                        lectus. Aliquam tincidunt tellus elit, sit amet imperdiet metus 
+                        fermentum ac. Cras suscipit consequat ultrices. Mauris commodo, 
+                        enim a suscipit pellentesque, lacus sapien suscipit enim, quis 
+                        porttitor felis nibh suscipit lacus. Cras dapibus enim nec elit 
+                        fringilla, et bibendum justo rhoncus.</p>
+                </section>
+            </div>
+        </main>
+        <script>
+            window.onload = function(){ // chama a função anonima apos o carregamento da pagina (evento load)
+                const buttons = document.querySelectorAll("nav button"); // seleciona todos os  botoes dentnro do elm nav
+                for (let button of buttons){ // para cada botao dentre os selcionados
+                    button.onclick = () => openTab(button.dataset.tabname) // o click chama a função openTab com o atributo data-tabname do botao pressionado como argumento
+                }
+                openTab("BCC"); // essa linha define qual section deve ser aberta por default pelo navegador
+            }
+
+            function openTab(tabName){ // declaração da função
+                const lastTabActive = document.querySelector(".tabActive"); // procura pelo section ativo atualmente
+                if (lastTabActive !== null){ // caso tenho encontrado uma section ativa (obj não é nulo)
+                    lastTabActive.className = ""; // remove a classe da section, tornando-a inativa
+                }
+
+                const lastButtonActive = document.querySelector(".buttonActive"); // procura pelo butao ativo, marcado pela classe da busca
+                if (lastButtonActive !== null){ // caso a busca tenha sucesso (obj não nulo)
+                    lastButtonActive.className = ""; // remove a classe do botao, tornando-o inativo
+                }
+
+                const queryTab = ".tabs > section[data-tabname='" + tabName + "']"; // forma a string que será recebida pela query como argumento, baseaando-se no argumento recebido pela função
+                const queryButton = "nav button[data-tabname='" + tabName + "'] "; // forma a string que será recebida pela query como argumento, baseaando-se no argumento recebido pela função
+
+                document.querySelector(queryTab).className = "tabActive"; // muda a classe da section com data-tabname recebido como argumento, tornando-a ativa
+                document.querySelector(queryButton).className = "buttonActive"; // muda a classe do button com data-tabname recebido como argumento, tornando-o ativo
+            }
+            
+        </script>
+    </body>
