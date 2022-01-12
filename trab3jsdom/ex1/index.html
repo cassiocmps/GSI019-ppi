@@ -3,32 +3,16 @@
     
     <head>
         <meta charset="UTF-8">
-        <title>Janela Modal</title>
+        <title>JS+DOM ex1</title>
         <style>
-            header{
-                text-align: center;
-                color: whitesmoke;
-                background-color: gray;
-                padding: 1rem;
-            }
-            h1, h2 {
-                margin: 0;
-            }
             body {
-                margin: 0;
+                padding: 1rem;
                 background-image: url("images/background.jpg");
                 background-repeat: no-repeat;
                 background-size: cover;
                 font-family: 'Heuvetica Neue', Arial, sans-serif;
             }
-            main {
-                width: 60%;
-                margin: 0 auto;
-                padding: 2rem;
-                border: 1px solid gray;
-                border-top: 0;
-                background-color: whitesmoke;
-            }
+            
             .modal {
                 background-color: #0006;
                 width: 100%;
@@ -44,7 +28,7 @@
             }
 
             .modalContent {
-                background-color: whitesmoke;
+                background-color: white;
                 margin: auto;
                 padding: 20px;
                 border: 0.5px solid lightgray;
@@ -60,45 +44,38 @@
             }
 
             .buttonClose {
-                width: 80%;
+                width: 60%;
                 margin-top: 1rem;
+                padding: 3px;
+                background-color: rgb(189, 228, 253);
+                border: none;
             }
+
+            .buttonClose:hover{
+                background-color: rgb(219, 241, 255);
+            }
+
         </style>
     </head>
 
     <body>
-        <header>
-            <h1>Janela Modal</h1>
-        </header>
         <main>
-            <section>
-                <h2>Lorem Ipsum</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec dignissim ligula. 
-                    Aenean purus nunc, aliquam eu bibendum in, consectetur auctor urna. In turpis velit, 
-                    aliquam ut euismod vitae, dictum eget orci. Maecenas vitae purus sit amet neque consequat 
-                    aliquet sit amet eu lorem. Integer eget pharetra velit, sed vestibulum est. 
-                    Donec sollicitudin lectus sed maximus egestas. Proin sit amet feugiat mauris. 
-                    Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc gravida, velit ut 
-                    accumsan dapibus, libero sapien venenatis diam, sit amet condimentum sem risus id metus. 
-                    In vel massa pulvinar, tincidunt neque ac, cursus velit. Suspendisse ullamcorper sit amet 
-                    leo laoreet sodales. Aliquam pellentesque nisl justo, vel laoreet nunc rhoncus vitae. 
-                    Nam quam metus, condimentum vel sapien ut, commodo tincidunt ligula. Nam molestie tincidunt 
-                    tincidunt. Praesent tincidunt aliquet euismod. Ut eu mi at leo maximus tempor.
-                </p>
-                <p>
-                    Fusce ut risus mollis, eleifend leo nec, pretium ante. Sed lobortis lorem ante, ac commodo 
-                    tortor elementum nec. Donec at lacus non orci viverra consequat a quis justo. Quisque at 
-                    justo arcu. Pellentesque vel laoreet nisi. In gravida sit amet odio ut ultrices. In in leo 
-                    vel ex cursus dictum.
-                </p>
-            </section>
+            <h1>A FACOM</h1>
+            <p>
+                A Faculdade de Computação (FACOM) da Universidade Federal de Uberlândia 
+                foi criada em 2000, a partir do extinto Departamento de Informática (DEINF), 
+                criado em 1988, no âmbito do CETEC.
+            </p>
+            <p>
+                No início dos anos 2000 foi criado na Faculdade o Programa de 
+                Pós-Graduação em Ciência da Computação.
+            </p>
             
             <button class="buttonOpen">Abrir Modal</button>
 
             <div id="modal" class="modal">
                 <div class="modalContent">
-                    <h2>Fusce feugiat eu quam.</h2>
+                    <h2>Ola! Seja bem vindo!</h2>
                     <button class="buttonClose">Ok</button>
                 </div>
             </div>
