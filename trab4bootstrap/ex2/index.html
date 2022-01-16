@@ -13,10 +13,24 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container"> 
+        <!-- classe container deixa conteudo centralizado em telas largas
+            ou 100% em telas estreitas -->
         <form class="row g-2">
+            <!-- classe row é o grid system baseado em flexbox 
+                sendo que cada row é um container para as columns
+                g-2 é do gutter, espaoç entre cadas col. existe gx- e gy- para valores horizontais e verticais-->
 
             <div class="form-floating col-md-9">
+                <!-- classes do tipo form são para melhoramento dos
+                    campos textuais(input e textarea): form-control
+                    label: form-label 
+                    select(caixa de seleção): form-select 
+                    form-floating é para campos com rotulos flutuantes
+                
+                    col marca como columns para o grid system
+                    md sãos os breakpoints, a partir de qual tamanho de tela a dispoição será alterada
+                    o valor numero é a largura, numa escala de 1 a 12, com 12 ocupando a coluna inteira -->
                 <input type="text" class="form-control" id="inputNome" placeholder=" ">
                 <label for="inputNome">Nome completo</label>
             </div>
@@ -68,11 +82,14 @@
 
             <div class="col-12">
                 <button type="submit" class="btn btn-primary">
+                    <!-- btn é a classe de aprimoramento de botões
+                        btn-primary é do tipo do botão pronto do bootstrap -->
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
                         <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
                         <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
-                      </svg>
+                    </svg>
+                    <!-- icone svg. pode ser usado visitando icons.getbootstrap.com/ -->
                     Cadastrar
                 </button>
             </div>
@@ -81,6 +98,7 @@
                 integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
                 crossorigin="anonymous">
             </script>
+            <!-- script bundle do bootstrap e da biblioteca popper -->
         </form>
     </div>
 </body>
