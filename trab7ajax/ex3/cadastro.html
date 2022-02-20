@@ -1,0 +1,58 @@
+<!DOCType html>
+<html lang="pt-br">
+    
+    <head>
+        <meta charset="UTF-8">
+        <title>PHP ex6 - Cadastro</title>
+        <style>
+            html{
+                background-color: whitesmoke;
+            }
+            main{
+                font-family: Georgia;
+                width: 50%;
+                background-color: white;
+                border: 0.8px solid #aaa;
+                border-radius: 5px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            input{
+                padding: 10px;
+                border: 1px solid #888;
+                border-radius: 5px;
+                display: block;
+                margin: 3px;
+                width: 90%;
+            }
+            input:focus{
+                border: 1px solid red;
+                box-shadow: 0 0 5px red;
+                outline: none;
+            }
+            div{
+                margin: 1rem;
+            }
+        </style>
+    </head>
+
+    <body>
+        <main>
+            <form action="cadastro.php" method="post">
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div>
+                    <button>Cadastrar</button>
+                </div>
+            </form>
+            
+        </main>
+    </body>
