@@ -1,0 +1,81 @@
+<!DOCType html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>PROVA QUESTAO 4</title>
+    <style>
+        html {
+            background-color: white;
+        }
+
+        body {
+            font-family: Verdana;
+            width: 50%;
+            background-color: #dedede;
+            border: 0.8px solid #aaa;
+            border-radius: 5px;
+            position: absolute;
+
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        main {
+            border: black 0.5px;
+        }
+
+        section, footer {
+            margin: 0;
+            padding: 2rem;
+        }
+
+        body>h1, footer {
+            color: white;
+            text-align: center;
+            background-color: black;
+            margin: 0;
+            padding: 1rem;
+        }
+
+        div {
+            display: inline-block;
+        }
+
+        .mensagem{
+            display: block;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Bem Vindo!</h1>
+    <main>
+        <form action="" method="get">
+            <section>
+                <p>Deixe a sua mensagem (fundo na cor #dedede)</p>
+                <div>
+                    <label for="nome">Nome</label>
+                    <input  type="text" id="nome" name="nome">
+                </div>
+
+                <div>
+                    <label for="email">Email</label>
+                    <input  type="email" id="email" name="email">
+                </div>
+
+                <div class="mensagem">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea name="mensagem" id="mensagem"></textarea>
+                </div>
+
+                <p><strong>Cuidado:</strong> Tenha atenção aos detalhes!</p>
+            </section>
+        </form>
+    </main>
+    <footer>
+        <address>Rodape - Rua ABC, nº 123</address>
+    </footer>
+</body>
